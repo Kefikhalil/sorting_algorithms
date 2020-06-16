@@ -12,10 +12,12 @@ void selection_sort(int *array, size_t size)
 		min = red;
 		for (blue = red; blue < size; blue++)
 			if (array[blue] < array[min])
-				min = red;
-		s = array[min];
-		array[min] = array[blue];
-		array[blue] = s;
+				min = blue;
+		if (min == red)
+			continue;	
+	 	s = array[min];
+		array[min] = array[red];
+		array[red] = s;
 		print_array(array, size);
 	}
 }
