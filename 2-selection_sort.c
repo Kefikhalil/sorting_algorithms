@@ -1,6 +1,14 @@
 #include "sort.h"
 
-void selection_sort(int *array, size_t size)
+/**
+ * velection_sort - sorts an array of integers
+ * @array: an array of integers
+ * @size: the size of the array
+ *
+ * Return: void
+ */
+
+id selection_sort(int *array, size_t size)
 {
 	size_t red;
 	size_t blue;
@@ -14,8 +22,8 @@ void selection_sort(int *array, size_t size)
 			if (array[blue] < array[min])
 				min = blue;
 		if (min == red)
-			continue;	
-	 	s = array[min];
+			continue;
+		s = array[min];
 		array[min] = array[red];
 		array[red] = s;
 		print_array(array, size);
