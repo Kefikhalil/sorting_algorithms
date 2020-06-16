@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * velection_sort - sorts an array of integers
+ * selection_sort - sorts an array of integers
  * @array: an array of integers
  * @size: the size of the array
  *
